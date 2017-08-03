@@ -1,0 +1,95 @@
+// $Id: rmsmarker.hpp 256 2009-08-22 14:31:09Z rs $
+
+#ifndef RMSMARKER_HPP
+#define RMSMARKER_HPP
+
+#include <riegl/config.hpp>
+#include <riegl/connection.hpp>
+#include <riegl/buffer.hpp>
+
+#include <string>
+#include <vector>
+#include <map>
+#include <set>
+#include <tr1/memory>
+
+namespace scanlib {
+
+class RIVLIB_API decoder_rmsmarker
+{
+public:
+    typedef uint32_t value_type;
+
+    std::map<uint16_t, std::string>         jobs;
+    std::map<uint16_t, std::string>         ids;
+
+    decoder_rmsmarker(
+        std::tr1::shared_ptr<basic_rconnection> rconnection_
+        , unsigned max_jobs = 0
+        , std::vector<std::string> jobs_ = std::vector<std::string>()
+    );
+
+    operator const void* (
+    ) const {
+        return end_of_input?0:this;
+    }
+
+    bool
+    eoi(
+    ) const {
+        return end_of_input;
+    }
+
+    uint16_t
+    get(
+        buffer& b
+    );
+
+private:
+    struct context {
+        context(
+            uint16_t nr_ = 0
+        )   : nr(nr_)
+            , pos(0)
+            , need_start(true)
+            , unescape(false)
+            , eoi(false)
+            , preamble_once(true) {
+            packet_buffer.reserve(1024);
+        }
+
+        uint16_t                nr;
+        unsigned char           value[4];
+        unsigned char           pos;
+        bool                    need_start;
+        bool                    unescape;
+        bool                    eoi;
+        bool                    preamble_once;
+        std::vector<value_type> packet_buffer;
+        std::vector<char>       preamble_buffer;
+    };
+
+    basic_rconnection*                          impl_rconnection;
+    std::tr1::shared_ptr<basic_rconnection>     rconnection;
+    bool                                        rxp_mode;
+    bool                                        end_of_data;
+    bool                                        end_of_input;
+    bool                                        preamble_once;
+    std::vector<unsigned char>                  read_buffer;
+    uint16_t                                    read_pending;
+    std::vector<unsigned char>::const_iterator  read_ptr;
+    std::map<uint16_t, context>                 processed_contexts;
+    std::map<uint16_t, context>::iterator       current;
+    std::map<std::string, uint16_t>             delivered_jobs;
+    std::map<uint16_t, std::string>             discovered_jobs;
+    unsigned                                    max_jobs;
+    std::set<uint16_t>                          skipped_nr;
+    void
+    underflow(
+    );
+
+};
+
+} // namespace rivlib
+
+#endif //RMSMARKER_HPP

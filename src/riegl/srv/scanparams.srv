@@ -1,0 +1,7 @@
+float64 lineangle
+float64 frameangle
+float64 maxlineangle
+float64 minlineangle
+float64 maxframeangle
+float64 minframeangle
+---

@@ -1,0 +1,6 @@
+<launch>
+  <node name="master_sync" pkg="master_sync_fkie" type="master_sync">
+    <rosparam param="ignore_nodes">[]</rosparam>
+    <rosparam param="ignore_hosts">[]</rosparam>
+  </node>
+</launch>

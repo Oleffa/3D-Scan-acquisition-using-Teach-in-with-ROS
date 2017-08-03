@@ -1,0 +1,11 @@
+obstacle_range: 4.0
+raytrace_range: 4.0
+#footprint: [[0.17, 0.27], [-0.48, 0.278], [-0.48, -0.27], [0.17, -0.27]]
+footprint: [[0.17, 0.27], [-0.15, 0.27], [-0.48, 0.17], [-0.48,-0.17], [-0.15, -0.27], [0.17, -0.27]]
+#robot_radius: ir_of_robot
+inflation_radius: 0.5
+
+observation_sources: laser_scan_sensor 
+laser_scan_sensor: {sensor_frame: /front_laser, data_type: LaserScan, topic: LMS, marking: true, clearing: true}
+
+map_type:   "costmap"

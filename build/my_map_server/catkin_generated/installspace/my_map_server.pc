@@ -1,0 +1,8 @@
+prefix=/home/oleffa/catkin_ws/install
+
+Name: my_map_server
+Description: Description of my_map_server
+Version: 1.14.0
+Cflags: -I/home/oleffa/catkin_ws/install/include
+Libs: -L/home/oleffa/catkin_ws/install/lib -lmap_server_image_loader
+Requires: roscpp tf nav_msgs

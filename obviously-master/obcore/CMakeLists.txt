@@ -1,0 +1,72 @@
+cmake_minimum_required (VERSION 2.6)
+include(FindPkgConfig)
+
+############################
+# General project settings #
+############################
+
+PROJECT(OBCORE)
+
+SET(USE_EIGEN 0)
+CONFIGURE_FILE( math/linalg/linalg.h.in ${CMAKE_CURRENT_SOURCE_DIR}/math/linalg/linalg.h )
+  
+FIND_PACKAGE(Eigen REQUIRED)
+
+INCLUDE_DIRECTORIES(../..
+                    ..
+                    .
+                    ${EIGEN_INCLUDE_DIRS}
+                    /usr/include/lua5.1
+                    )
+
+SET(LIBRARY STATIC
+                base/CartesianCloud.cpp
+                base/CartesianCloudFactory.cpp
+                base/Timer.cpp
+                base/Logger.cpp
+                base/tools.cpp
+                base/Time.cpp
+                base/PointCloud.cpp
+                statemachine/Agent.cpp
+                statemachine/AgentModel.cpp
+                statemachine/RobotModel.cpp
+                statemachine/states/StateBase.cpp
+                statemachine/states/StateLua.cpp
+                statemachine/states/StatePing.cpp
+                statemachine/states/StatePong.cpp
+                math/geometry.cpp
+                math/linalg/MatrixFactory.cpp
+                math/Quaternion.cpp
+                math/PID_Controller.cpp
+                math/IntegratorSimpson.cpp
+                math/TransformationWatchdog.cpp
+                math/Trajectory.cpp
+                filter/EuclideanFilter.cpp
+                filter/CartesianFilter.cpp
+                filter/NormalFilter.cpp
+                filter/BoundingBoxFilter.cpp
+                scripting/LuaScriptManager.cpp
+                )
+
+IF(USE_EIGEN)
+  message("Using libeigen for obcore")
+  SET(LIBRARY ${LIBRARY} math/linalg/eigen/Matrix.cpp
+                         math/linalg/eigen/Vector.cpp
+                         )                 
+ELSE()
+  message("Using gsl for obcore")
+  
+  SET(LIBRARY ${LIBRARY} math/linalg/gsl/Matrix.cpp
+                         math/linalg/gsl/Vector.cpp
+                         )
+ENDIF()
+
+ADD_LIBRARY(obcore ${LIBRARY})
+
+####################
+##### Packaging ####
+####################
+IF(CMAKE_BUILD_TYPE MATCHES Release)
+INSTALL(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}" DESTINATION ${OBVIOUSLY_INC_DIR} FILES_MATCHING PATTERN "*.h")
+INSTALL(TARGETS obcore ARCHIVE DESTINATION ${OBVIOUSLY_LIB_DIR})
+ENDIF()

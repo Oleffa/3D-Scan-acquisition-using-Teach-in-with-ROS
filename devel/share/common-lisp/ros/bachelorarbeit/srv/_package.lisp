@@ -1,0 +1,15 @@
+(cl:defpackage bachelorarbeit-srv
+  (:use )
+  (:export
+   "PRESSED"
+   "<PRESSED-REQUEST>"
+   "PRESSED-REQUEST"
+   "<PRESSED-RESPONSE>"
+   "PRESSED-RESPONSE"
+   "ADDTWOINTS"
+   "<ADDTWOINTS-REQUEST>"
+   "ADDTWOINTS-REQUEST"
+   "<ADDTWOINTS-RESPONSE>"
+   "ADDTWOINTS-RESPONSE"
+  ))
+

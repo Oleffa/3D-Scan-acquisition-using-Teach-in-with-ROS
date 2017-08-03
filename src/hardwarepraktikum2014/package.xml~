@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package>
+  <name>hardwarepraktikum2014</name>
+  <version>0.0.0</version>
+  <description>
+
+     package mit den daten aus dem hwp 2014
+
+  </description>
+  <author>Oliver Struckmeier</author>
+  <license>BSD</license>
+  <url>http://ros.org/wiki/oli</url>
+
+  <maintainer email="oliver.struckmeier@stud-mail.uni-wuerzburg.de">Oliver Struckmeier</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>std_srvs</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>tf</build_depend>
+<build_depend>tf</build_depend>
+<build_depend>tf</build_depend>
+<build_depend>tf</build_depend>
+<build_depend>tf</build_depend>
+
+</package>
+
+

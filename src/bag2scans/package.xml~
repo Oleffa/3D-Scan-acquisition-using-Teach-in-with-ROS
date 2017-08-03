@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package>
+  <name>bag2scans</name>
+  <version>0.0.1</version>
+  <description>bag2scans</description>
+  <maintainer email="todo@todo.todo">Jan Elseberg</maintainer>
+  <license>BSD</license>
+  <url>http://ros.org/wiki/bag2scans</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>riegl</build_depend>
+  <build_depend>rclock</build_depend>
+  <build_depend>rosbag</build_depend>
+  <build_depend>volksbot</build_depend>
+  <build_depend>laser_geometry</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>cmake_modules</build_depend>
+  <build_depend>riegl</build_depend>
+  <build_depend>eigen</build_depend>
+  <build_depend>bfl</build_depend>
+  
+  <run_depend>rosbag</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>laser_geometry</run_depend>
+  <run_depend>message_runtime</run_depend>
+  <run_depend>riegl</run_depend>
+  <run_depend>volksbot</run_depend>
+  <run_depend>eigen</run_depend>
+  <run_depend>bfl</run_depend>
+  
+</package>

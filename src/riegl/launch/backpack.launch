@@ -1,0 +1,11 @@
+<launch>
+  <!-- Load the configuration file -->
+  <rosparam command="load" file="$(find riegl)/launch/parameters_backpack.yaml" /> 
+
+  <node pkg="rclock" type="timepublisher" name="timepublisher"/>
+  <node pkg="riegl" name="rxplogger" type="rxplogger" />
+  <node pkg="riegl" name="tslogger" type="tslogger" />
+  <node pkg="riegl" name="rieglctr" type="ctr" respawn="true"/>
+  <node pkg="lms100" name="sick_front" type="sicksensor" />
+
+</launch>

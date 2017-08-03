@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "ohm_tsd_slam")
+set(ohm_tsd_slam_MAINTAINER "Philipp Koch <philipp.koch@th-nuernberg.de>, Markus Kühn <markus.kuehn@th-nuernberg.de>")
+set(ohm_tsd_slam_DEPRECATED "")
+set(ohm_tsd_slam_VERSION "0.0.0")
+set(ohm_tsd_slam_BUILD_DEPENDS "geometry_msgs" "nav_msgs" "roscpp" "sensor_msgs" "tf")
+set(ohm_tsd_slam_RUN_DEPENDS "geometry_msgs" "nav_msgs" "roscpp" "sensor_msgs" "tf")
+set(ohm_tsd_slam_BUILDTOOL_DEPENDS "catkin")
