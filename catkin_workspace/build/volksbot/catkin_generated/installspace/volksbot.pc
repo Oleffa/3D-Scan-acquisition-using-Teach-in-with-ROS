@@ -1,8 +1,0 @@
-prefix=/home/oleffa/catkin_ws/install
-
-Name: volksbot
-Description: Description of volksbot
-Version: 0.0.1
-Cflags: -I/home/oleffa/catkin_ws/install/include
-Libs: -L/home/oleffa/catkin_ws/install/lib 
-Requires: std_msgs message_runtime roscpp

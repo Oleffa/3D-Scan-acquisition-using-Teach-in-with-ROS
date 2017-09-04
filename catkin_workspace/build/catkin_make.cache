@@ -1,2 +1,0 @@
-bachelorarbeit:bag2scans:hardwarepraktikum2014:lms100:my_map_server:ohm_tsd_slam:rclock:riegl:rosbag2:volksbot
--DCATKIN_DEVEL_PREFIX=/home/oleffa/3D-Scan-acquisition-using-Teach-in-with-ROS/devel -DCMAKE_INSTALL_PREFIX=/home/oleffa/3D-Scan-acquisition-using-Teach-in-with-ROS/install -G Unix Makefiles

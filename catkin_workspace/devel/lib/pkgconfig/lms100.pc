@@ -1,8 +1,0 @@
-prefix=/home/oleffa/catkin_ws/devel
-
-Name: lms100
-Description: Description of lms100
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/oleffa/catkin_ws/devel/lib 
-Requires: std_msgs message_runtime

@@ -1,8 +1,0 @@
-prefix=/home/oleffa/catkin_ws/install
-
-Name: rosbag2
-Description: Description of rosbag2
-Version: 1.11.9
-Cflags: -I/home/oleffa/catkin_ws/install/include
-Libs: -L/home/oleffa/catkin_ws/install/lib -lrosbag2
-Requires: rosbag_storage rosconsole roscpp topic_tools xmlrpcpp

@@ -1,8 +1,0 @@
-prefix=/home/oleffa/catkin_ws/devel
-
-Name: hwp2014
-Description: Description of hwp2014
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/oleffa/catkin_ws/devel/lib 
-Requires: 

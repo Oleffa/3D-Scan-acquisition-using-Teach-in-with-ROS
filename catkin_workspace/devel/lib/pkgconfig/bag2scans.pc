@@ -1,8 +1,0 @@
-prefix=/home/oleffa/catkin_ws/devel
-
-Name: bag2scans
-Description: Description of bag2scans
-Version: 0.0.1
-Cflags: 
-Libs: -L/home/oleffa/catkin_ws/devel/lib 
-Requires: std_msgs message_runtime rosbag eigen bfl riegl volksbot

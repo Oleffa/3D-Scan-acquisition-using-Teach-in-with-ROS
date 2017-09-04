@@ -1,2 +1,0 @@
-set(riegl_MESSAGE_FILES "/home/oleffa/catkin_ws/src/riegl/msg/RieglStatus.msg;/home/oleffa/catkin_ws/src/riegl/msg/RieglTime.msg")
-set(riegl_SERVICE_FILES "/home/oleffa/catkin_ws/src/riegl/srv/angle.srv;/home/oleffa/catkin_ws/src/riegl/srv/scanparams.srv;/home/oleffa/catkin_ws/src/riegl/srv/Command.srv;/home/oleffa/catkin_ws/src/riegl/srv/selection.srv;/home/oleffa/catkin_ws/src/riegl/srv/progress.srv;/home/oleffa/catkin_ws/src/riegl/srv/inclination.srv")

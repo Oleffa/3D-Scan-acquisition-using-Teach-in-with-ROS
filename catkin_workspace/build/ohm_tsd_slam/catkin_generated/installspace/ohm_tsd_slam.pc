@@ -1,8 +1,0 @@
-prefix=/home/oleffa/catkin_ws/install
-
-Name: ohm_tsd_slam
-Description: Description of ohm_tsd_slam
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/oleffa/catkin_ws/install/lib 
-Requires: 
