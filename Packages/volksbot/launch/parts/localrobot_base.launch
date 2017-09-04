@@ -1,0 +1,28 @@
+<launch>
+  <!-- Load the configuration file -->
+  <rosparam command="load" file="$(find volksbot)/launch/config/parameters.yaml" /> 
+
+  <!-- Load calibration components -->
+  <include file="$(find volksbot)/launch/parts/localcalibration.launch" />
+
+  <!-- Essential volksbot stuff -->
+  <node pkg="volksbot" name="volksbot" type="volksbot" />
+  <node pkg="volksbot" name="odometry" type="odometry" />
+
+  <!-- Sensors -->
+  <node pkg="xsensRT" name="xsense" type="xsense" />
+  <node pkg="lms100" name="sick_front" type="sicksensor" />
+  <node pkg="riegl" name="rieglctr" type="ctr" respawn="true"/>
+  
+  <!--  Logging for assembling/calibrating scans afterwards -->
+  <node pkg="riegl" name="rxplogger" type="rxplogger" />
+  <node pkg="rclock" type="timepublisher" name="timepublisher"/>
+  <node pkg="riegl" name="tslogger" type="tslogger" />
+  <node pkg="bag2scans" name="record" type="record" />
+
+  <!-- Use this part if you want to write scans online
+  <node pkg="riegl" name="receiver" type="receiver" />
+  <node pkg="riegl" name="scanassembler" type="assembler"/>
+  -->
+
+</launch>

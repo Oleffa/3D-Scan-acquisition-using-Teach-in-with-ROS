@@ -1,0 +1,17 @@
+<launch>
+
+<arg name="folder"/>
+
+  <!-- Start robot controlls -->
+<include file="$(find volksbot)/launch/lehre/advancedautomation.launch"/>
+
+  <!-- Start amcl -->
+<include file="$(find volksbot)/launch/lehre/advancedautomationamcl.launch"/>
+
+  <!-- Start riegl -->
+<include file="$(find riegl)/launch/riegl.launch"/>
+
+  <!-- Start pathfollower -->
+<node name="pfadvefolgung2" pkg="hardwarepraktikum2014" type="pfadverfolgung2" args="$(arg folder)"/>
+
+</launch>

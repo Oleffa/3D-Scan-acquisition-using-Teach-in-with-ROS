@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/software/!svn/ver/45/ros/riegl/include/riegl/detail
+END
+clockcomp.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/software/!svn/ver/45/ros/riegl/include/riegl/detail/clockcomp.hpp
+END
+package.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/software/!svn/ver/45/ros/riegl/include/riegl/detail/package.hpp
+END
+baseifc_t.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/software/!svn/ver/45/ros/riegl/include/riegl/detail/baseifc_t.h
+END
+uri.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/software/!svn/ver/45/ros/riegl/include/riegl/detail/uri.hpp
+END
+pointsifc_t.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/software/!svn/ver/45/ros/riegl/include/riegl/detail/pointsifc_t.h
+END
+binary.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/software/!svn/ver/45/ros/riegl/include/riegl/detail/binary.hpp
+END

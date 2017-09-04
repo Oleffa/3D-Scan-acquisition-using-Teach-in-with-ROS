@@ -1,0 +1,88 @@
+#include "ros/ros.h" 
+#include "std_msgs/String.h"
+#include "nav_msgs/Odometry.h" 
+#include "volksbot/vels.h"
+#include "gio_path.h"
+#include <fstream>
+#include "math.h"
+#include "std_srvs/Empty.h"
+
+using namespace std;
+CGioController cgio;
+
+double x,y,qx,qy,qz,qw,phi;
+
+	double u = 0.0;
+	double w = 0.0;
+	int loop = 1;
+
+
+	double vright = 0.0;
+	double vleft = 0.0;
+
+void Odometry_Callback( const nav_msgs::OdometryConstPtr& message) {
+
+ROS_INFO("Receiving ODOM"); 
+
+x = (double)message->pose.pose.position.x;
+y = (double)message->pose.pose.position.y;
+qx = (double)message->pose.pose.orientation.x;
+qy = (double)message->pose.pose.orientation.y;
+qz = (double)message->pose.pose.orientation.z;
+qw = (double)message->pose.pose.orientation.w;
+
+phi = atan2(2*qz*qw , 1 - 2*qz*qz);
+
+
+}
+
+int main( int argc, char** argv) {
+std_srvs::Empty e;
+
+
+cgio.getPathFromFile("/home/oleffa/catkin_ws/src/hardwarepraktikum2014/pfade/test.dat");
+//cgio.getPathFromFile("quadratclock.dat");
+
+ros::init(argc, argv, "odometry_subscriber");
+
+ros::NodeHandle n;
+
+ros::Subscriber sub = n.subscribe("odom", 1000, Odometry_Callback);
+
+
+ros::Publisher publisher = n.advertise<volksbot::vels>("Vel",1000);
+
+ros::Rate loop_rate(10);
+
+cgio.setCurrentVelocity(15);
+
+//Begin Regler----------------------------------------------------------------------------
+
+
+
+
+while(cgio.getNextState(u, w, vleft, vright, 1)){
+	//get data
+
+	volksbot::vels velocity;
+
+	velocity.left = (float) -vleft;
+	velocity.right = (float) -vright;
+	
+	ros::spinOnce();
+
+	ROS_INFO("vels: right: %f, left: %f", (double)vright, (double) vleft);
+
+	//publish vel to Vel topic
+	publisher.publish(velocity);
+	cgio.setPose(x,y,phi);
+
+	loop_rate.sleep();
+}
+
+//Ende Regler---------------------------------------------------------------------------
+ROS_INFO("done");
+ros::service::call("startMeasuring", e);
+
+return 0;
+}

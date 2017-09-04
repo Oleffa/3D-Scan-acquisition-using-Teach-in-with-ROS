@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/software/!svn/ver/45/ros/riegl/include/riegl
+END
+ctrllib.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/software/!svn/ver/45/ros/riegl/include/riegl/ctrllib.hpp
+END
+fileconn.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/software/!svn/ver/45/ros/riegl/include/riegl/fileconn.hpp
+END
+connection.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/software/!svn/ver/45/ros/riegl/include/riegl/connection.hpp
+END
+rmsmarker.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/software/!svn/ver/45/ros/riegl/include/riegl/rmsmarker.hpp
+END
+config.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/software/!svn/ver/45/ros/riegl/include/riegl/config.hpp
+END
+scanifc.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/software/!svn/ver/45/ros/riegl/include/riegl/scanifc.h
+END
+rddpconn.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/software/!svn/ver/45/ros/riegl/include/riegl/rddpconn.hpp
+END
+rdtp.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/software/!svn/ver/45/ros/riegl/include/riegl/rdtp.hpp
+END
+buffer.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/software/!svn/ver/45/ros/riegl/include/riegl/buffer.hpp
+END
+rxpmarker.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/software/!svn/ver/45/ros/riegl/include/riegl/rxpmarker.hpp
+END
+scanlib.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/software/!svn/ver/45/ros/riegl/include/riegl/scanlib.hpp
+END
+rftifc.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/software/!svn/ver/45/ros/riegl/include/riegl/rftifc.h
+END
+ridataspec.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/software/!svn/ver/45/ros/riegl/include/riegl/ridataspec.hpp
+END
+pointcloud.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/software/!svn/ver/45/ros/riegl/include/riegl/pointcloud.hpp
+END
+rftlib.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/software/!svn/ver/45/ros/riegl/include/riegl/rftlib.hpp
+END
+waveifc.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/software/!svn/ver/45/ros/riegl/include/riegl/waveifc.h
+END
+fullwave.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/software/!svn/ver/45/ros/riegl/include/riegl/fullwave.hpp
+END
+rxpstream.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/software/!svn/ver/45/ros/riegl/include/riegl/rxpstream.hpp
+END
+ctrlifc.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/software/!svn/ver/45/ros/riegl/include/riegl/ctrlifc.h
+END
+rdtpconn.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/software/!svn/ver/45/ros/riegl/include/riegl/rdtpconn.hpp
+END

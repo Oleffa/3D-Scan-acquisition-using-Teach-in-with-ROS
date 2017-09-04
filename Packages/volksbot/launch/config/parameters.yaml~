@@ -1,0 +1,59 @@
+devices/joystick:       "/dev/input/js0"
+#devices/mti:            "/dev/ttyS4"   # P1 on adapter
+#devices/volksbot:       "/dev/ttyS5"   # P2 on adapter
+#devices/volksbot:       "/dev/ttyUSB0" 
+#devices/mti:            "/dev/ttyUSB1" 
+devices/volksbot:       "/dev/volksbot" 
+#devices/mti:            "/dev/xsens" 
+
+control/joystick/logitechf710: 1
+control/joystick/ducttape: 0
+control/joystick/predator: 0
+control/joystick/firejet:  0
+
+
+xsense/rate:            25
+xsense/timeout:         0
+
+
+riegl/ip:               "192.168.0.125"
+#riegl/ip  :             "10.0.0.1"
+
+riegl/fov/min_line:     30.0
+riegl/fov/max_line:     130.0
+riegl/fov/min_frame:    0.0
+riegl/fov/max_frame:    360.0
+riegl/resolution/frame: 0.10
+riegl/resolution/line:  0.10
+#riegl/resolution/line:  0.04
+#riegl/resolution/frame: 0.04
+
+#riegl/resolution/frame: 0.04
+#riegl/resolution/line:  0.04
+#riegl/resolution/frame: 0.04
+#riegl/resolution/line:  0.04
+riegl/mode:             1
+
+
+#sick/ip:                "192.168.0.9" #Lars
+sick/ip:                "192.168.0.51" #Irma
+sick/port:              2111
+
+sick/fov/min:           -45
+sick/fov/max:           225
+sick/resolution:        0.5
+sick/rate:              50
+
+
+log/interval:           0.01
+log/timestamp:          "timestamps.txt"
+log/bagfile:            "log.bag"
+log/rxpfile:            "raw.rxp"
+log/basedir:            "/home/oleffa/catkin_ws/3DScans/"
+log/scandir:            "scan3d/"
+log/lms100:            "lms100/"
+
+
+######## 
+odometry/wheel_base:          44.4
+odometry/ticks_per_cm:        -461.817

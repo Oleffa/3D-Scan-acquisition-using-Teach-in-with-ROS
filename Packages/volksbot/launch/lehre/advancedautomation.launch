@@ -1,0 +1,24 @@
+<launch>
+  <!-- Load the configuration file -->
+  <rosparam command="load" file="$(find volksbot)/launch/config/parameters.yaml" /> 
+
+  <!-- Load calibration components -->
+  <include file="$(find volksbot)/launch/parts/localcalibration.launch" />
+
+  <!-- Essential volksbot stuff -->
+  <node pkg="volksbot" name="volksbot" type="volksbot" />
+  <node pkg="volksbot" name="odometry" type="odometry" args="1"/>
+
+  <!-- Sensors -->
+  <node pkg="lms100" name="sick_front" type="sicksensor" />
+  
+  <!-- As the ekf filter requires the robots coordinate frame to be called base_footprint instead of base_link -->
+
+  <!--
+  <node pkg="tf" type="static_transform_publisher" name="baselink" args="0 0 0 0 0 0 /base_footprint /base_link 100"/>
+  <node pkg="robot_pose_ekf" type="robot_pose_ekf" name="robot_pose_ekf" >
+    <rosparam file="$(find volksbotRT)/launch/config/ekf_params.yaml" command="load" />
+  </node>
+  -->
+
+</launch>
