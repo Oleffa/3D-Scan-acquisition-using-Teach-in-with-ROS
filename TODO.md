@@ -5,3 +5,4 @@
 
 # Installation
   - SDL stuff
+  - package bachelorarbeit -> waypoint_handler, deleted "pressed.srv", put the launch files to catkin_ws
