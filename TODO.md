@@ -2,6 +2,7 @@
 
 - clean all packages from unused stuff
 - repair all launchfiles and add documentation about them
+- launchiles in catkin_ws
 
 # Installation
   - SDL stuff
