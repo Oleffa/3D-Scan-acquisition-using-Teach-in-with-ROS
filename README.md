@@ -21,6 +21,7 @@ The functionalities have been optimized and presented at the conference "Oldenbu
 ## Installation
   - If the ohm-tsd-slam (used for localization) package is to be used you need the obviously library. For more information visit: https://github.com/autonohm/obviously
   - For use with the ros amcl package just do not build the ohm_tsd_slam package
+  - TODO: recompile some packages because there were some difficulties
   
 ## Generation of 3D-Map
   - In this project the 3D Toolkit (3DTK: http://slam6d.sourceforge.net/index.html) was used to process the single scans into one 3D-Point cloud
