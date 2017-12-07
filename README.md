@@ -3,7 +3,9 @@
 ## Introduction
 
 This Repository contains all packages created and modified during the course of my bachelor thesis at the chair for Robotics and Telematics of the Julius-Maximilians-Universität Würzburg.
-The functionalities have been optimized and presented at the conference "Oldenburger 3D Tage 2016" in Oldenburg (https://www.jade-hs.de/unsere-hochschule/fachbereiche/bauwesen-geoinformation-gesundheitstechnologie/geoinformation/veranstaltungen/oldenburger-3d-tage/). More information can be found in the included german PDF version of my thesis or the article published in "Photogrammetrie - Laserscanning - Optische 3D-Messtechnik" (ISBN 978-3-87907-625-3).
+The functionalities have been optimized and presented at the conference "Oldenburger 3D Tage 2016" in Oldenburg (https://www.jade-hs.de/unsere-hochschule/fachbereiche/bauwesen-geoinformation-gesundheitstechnologie/geoinformation/veranstaltungen/oldenburger-3d-tage/). More information can be found in the included german PDF version of my thesis or the article published in "Photogrammetrie - Laserscanning - Optische 3D-Messtechnik" (ISBN 978-3-87907-625-3). The PDF of the shorter paper can be found on: https://robotik.informatik.uni-wuerzburg.de/telematics/download/olb2017.pdf
+
+![IRMA3D](https://github.com/Oleffa/3D-Scan-acquisition-using-Teach-in-with-ROS/blob/master/3DVergleich1.JPG)
 
 ## Features
 - Controling a mobile robot using a different kinds of USB-gamepads
@@ -11,6 +13,8 @@ The functionalities have been optimized and presented at the conference "Oldenbu
 - Generating of 2D-maps of an environment + Localization in the 2D-map using simultaneous localization and mapping (SLAM). Either by using the the amcl package of ROS or ohm_tsd_slam (http://wiki.ros.org/ohm_tsd_slam)
 - Manual and automatic 3D-scanning using a RIEGL VZ-400 Laserscanner
 - Waypoint saving on a path as positions for automated 3D-scans
+
+![IRMA3D](https://github.com/Oleffa/3D-Scan-acquisition-using-Teach-in-with-ROS/blob/master/IRMA01_src.JPG)
 
 ## Process
   1. Teaching in a path and waypoints to the robot and generating a 2D-Map of the environment using amcl or ohm_tsd_slam
